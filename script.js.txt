@@ -1,0 +1,17 @@
+// script.js
+window.onload = function() {
+    // Example data for leaderboard
+    const leaderboard = [
+        { rank: '1st', name: 'John Doe', prize: '£3' },
+        { rank: '2nd', name: 'Jane Smith', prize: '£1.5' },
+        { rank: '3rd', name: 'Sam Brown', prize: '£1' }
+    ];
+
+    const leaderboardTable = document.querySelector('.leaderboard-table');
+    
+    leaderboard.forEach(player => {
+        const row = document.createElement('tr');
+        row.innerHTML = `<td>${player.rank}</td><td>${player.name}</td><td>${player.prize}</td>`;
+        leaderboardTable.appendChild(row);
+    });
+}
